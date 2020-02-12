@@ -230,12 +230,6 @@ write_delim(join5, delim = "\t", na = "NA", col_names = TRUE,
             path = "curated_data/joined_results.txt")
 ```
 
-# Practice
-Repeat the spread + gather process to reduce the number of individuals who have paired measurements for pH and Bristol score. Calculate delta values for each of these metrics and plot them. 
-```{r}
-
-```
-
 
 -----
 end

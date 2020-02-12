@@ -1,0 +1,109 @@
+---
+title: "Lab 6: extra practice"
+author: "Kristi Gdanetz MacCready"
+date: "02/12/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = "~/Documents/UMBio201/Lab6/")
+```
+
+# Load packages
+```{r Load packages, message=FALSE, warning=FALSE, include=FALSE, results='hide'}
+library(tidyverse)
+library(readxl)
+library(broom)
+library(cowplot)
+set.seed(7)
+```
+
+# Import data
+Load the curated data created during Lab 6 if it is not already in your global environment
+```{r}
+avg_qc <- read_delim(file = "curated_data/avg_qc.txt", 
+                      delim = "\t", na = "NA", col_names = TRUE)
+
+bio2 <- read_delim(file = "curated_data/biographical_data.txt", 
+                   delim = "\t", na = "NA", col_names = TRUE)
+
+join5 <- read_delim(file = "curated_data/joined_results.txt", 
+                    delim = "\t", na = "NA", col_names = TRUE)
+```
+
+
+# Pratice 1
+Join the biographical and join5 data frames. Use this new data frame to answer the following questions:
+
+* (Q1) is the proportion of male and female participants consuming starch different?
+* (Q2) is the proportion of students with a positive response (this can be with one of more measures, SCFA, pH, etc.) to any potato starch different by sex? 
+* (Q3) Do you observe the same pattern when comparing types (LOODAT or BRMPS) of potato starches?
+* (Q4) Do you observe the same pattern when comparing frequency (1x or 2x) of starch consumed?
+* (Q5) is the proportion of students with a positive response to potato starch different by race/ethnicity? 
+* (Q6) Do you observe the same pattern when comparing types (LOODAT or BRMPS) of potato starches?
+* (Q7) Do you observe the same pattern when comparing frequency (1x or 2x) of starch consumed?
+
+```{r}
+# join here 
+```
+
+### Q1
+```{r}
+
+```
+
+### Q2
+```{r}
+
+```
+
+### Q3
+```{r}
+
+```
+
+### Q4
+```{r}
+
+```
+
+### Q5
+```{r}
+
+```
+
+### Q6
+```{r}
+
+```
+
+### Q7
+```{r}
+
+```
+
+
+# Practice 2
+
+###  Filter and plot
+Repeat the spread + gather process from Lab 6 to reduce the number of individuals who have paired measurements for pH and Bristol score. Calculate delta values for each of these metrics and plot them. 
+```{r}
+
+```
+
+### Q1
+Check assumptions, select and conduct the test you would need to use to identify if pH changed when participants consumed BRMPS. Hint: do not use the delta values here. 
+```{r}
+
+```
+
+### Q3
+Check assumptions, select and conduct the test you would need to use to identify under which supplement there was the greatest change in pH?
+```{r}
+
+```
+
+
+-----
+end

@@ -16,7 +16,6 @@ library(tidyverse)
 library(readxl)
 library(broom)
 library(cowplot)
-library(agricolae)
 set.seed(7)
 ```
 
@@ -96,7 +95,7 @@ rename_all(lab6_df, tolower)
 
 Tip: pipe all the column name modifications after the import function, then the first object created in the analysis is at least partially cleaned up.
 ```{r}
-lab6_df <- lab6_df <- all_data_indv <- read_delim("raw_data/all_data_indv.txt", 
+lab6_df <- read_delim("raw_data/all_data_indv.txt", 
     "\t", escape_double = FALSE, trim_ws = TRUE,
     col_types = cols("Participant ID" = col_character(),
                      "Sample Number" = col_character(), #default reads a numeric
@@ -185,7 +184,7 @@ df2
 ```
 Use the accessor functions to determine if the separate function was successful. 
 ```{r}
-nrow(lab6_df) # how many initial rows?
+nrow(lab6_df) #how many initial rows?
 
 nrow(df2) #now many resulting rows?
 
@@ -320,7 +319,7 @@ bio_df <- read_delim("raw_data/bio_df.txt",
   rename(race_ethnicity = "race/ethnicity") #remove backslash 
 summary(bio_df)
 ```
-Notice something odd about the minimum for each of these columns? Right, we cannot have people with 0's for these values, that just is not possible! Likely someone entered 0 instead of NA for individuals where this information was not disclosed. All we have to do is replace the 0 with an NA. The last thing to do here is convert height and weight to metric units. 
+Notice something odd about the minimum for each of these columns? Right, we cannot have people with 0's for these values, that just is not possible! Someone entered 0 instead of NA for individuals where this information was not disclosed. All we have to do is replace the 0 with an NA. Then last thing to do here is convert height and weight to metric units. 
 ```{r}
 bio2 <- bio_df %>%
   # use na_if within mutate to get rid of 0's
@@ -349,10 +348,6 @@ We also have methodological reasons for being suspicious of very high SCFA conce
 Any of these scenarios will effect the resulting mmol/kg concentration because the calculations assume 2 ml of sample buffer, and the sample weight is calculated as tube weight without sample subtracted from tube weight with sample. If there is less buffer in the tubes when the second weight is determined, the measurements are not usable. For Winter 2015, the tube weights before the fecal samples were collected are missing. This is why SCFA measurements from this semester are not used in our analyses. 
 
 This process is specific to our study and sample collection protocol, but hopefully walking through this process illustrates why giving consideration to quality control is important for any study.
-
-```{r}
-# determine number of initial samples
-```
 
 To address the points raised above the code below is going to do a series of filtering steps before some calculations. The following code chunck executes the following: 
 
@@ -389,7 +384,7 @@ lab6_qc1 <- df6 %>%
   select(-scfa_notes, -use_data, -sample_wt_kg, -ends_with("_mM"))
 ```
 
-All of these quality filtering measures have already been applied to data you have used in this course. In addition to what is in the code chunk above the following have been completed:
+All of these quality filtering measures have already been applied to data you have used in this course. In addition to what is in the code chunk above the following have been completed (code for this is not shown):
 
 * identify outliers for each SCFA
 * remove outliers for each SCFA
