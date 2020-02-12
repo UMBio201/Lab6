@@ -1,0 +1,799 @@
+Participant_ID	Sex	Age	Race/Ethnicity	ht_in	wt_lbs
+U001	NA	0	NA	0	0
+U002	NA	0	NA	0	0
+U003	NA	0	NA	0	0
+U004	NA	0	NA	0	0
+U005	NA	0	NA	0	0
+U006	NA	0	NA	0	0
+U007	NA	0	NA	0	0
+U008	NA	0	NA	0	0
+U009	NA	0	NA	0	0
+U010	NA	0	NA	0	0
+U011	NA	0	NA	0	0
+U013	NA	0	NA	0	0
+U014	NA	0	NA	0	0
+U015	NA	0	NA	0	0
+U016	NA	0	NA	0	0
+U017	NA	0	NA	0	0
+U018	NA	0	NA	0	0
+U019	NA	0	NA	0	0
+U020	NA	0	NA	0	0
+U021	NA	0	NA	0	0
+U022	NA	0	NA	0	0
+U023	NA	0	NA	0	0
+U024	NA	0	NA	0	0
+U025	NA	0	NA	0	0
+U026	NA	0	NA	0	0
+U027	NA	0	NA	0	0
+U028	NA	0	NA	0	0
+U029	NA	0	NA	0	0
+U030	NA	0	NA	0	0
+U031	NA	0	NA	0	0
+U032	NA	0	NA	0	0
+U033	NA	0	NA	0	0
+U034	NA	0	NA	0	0
+U035	NA	0	NA	0	0
+U036	NA	0	NA	0	0
+U037	NA	0	NA	0	0
+U041	NA	0	NA	0	0
+U042	Male	19	Caucasian/white	68.39880021	161.1855
+U043	Male	19	Asian or Pacific Islander	66.57467	134.7255
+U044	Male	18	Other	67.7164	188.5275
+U045	Female	19	Other	64.1731	136.9305
+U046	Male	19	Caucasian/white	69.551042	211.239
+U047	Male	21	Caucasian/white	67.36207	159.201
+U048	Female	20	Asian or Pacific Islander	62.5983	169.344
+U049	Female	19	Caucasian/white	63.81877	137.151
+U050	Female	19	Asian or Pacific Islander	62.7817642	140.3114265
+U051	Female	19	Asian or Pacific Islander	64.29121	180.369
+U052	Male	20	Caucasian/white	71.14159	160.524
+U053	Female	19	Other	66.57467	106.0605
+U054	Male	22	Caucasian/white	68.1101	139.1355
+U055	Female	20	Caucasian/white	66.25971	130.7565
+U056	Female	21	Asian or Pacific Islander	61.73216	101.723265
+U057	Male	19	Caucasian/white	67.84763333	150.822
+U058	Male	20	Caucasian/white	69.932931	164.55915
+U059	Female	18	Asian or Pacific Islander	63.62192	110.0295
+U060	NA	0	NA	0	0
+U061	Female	19	Latino/a or Hispanic	67.7427779	148.8375
+U062	NA	0	NA	0	0
+U063	Female	18	Other	65.7479	126.19215
+U064	Male	20	Caucasian/white	69.830569	139.99545
+U065	NA	0	NA	0	0
+U066	Female	19	Caucasian/white	65.51168	131.859
+U067	Female	19	Caucasian/white	63.7794	142.002
+U068	Male	20	Latino/a or Hispanic	69.6849	145.971
+U069	Male	19	Asian or Pacific Islander	69.17309	164.33865
+U070	Female	19	Asian or Pacific Islander	62.04712	106.0605
+U071	NA	0	NA	0	0
+U072	Female	19	Caucasian/white	62.40145	123.921
+U073	Male	19	Native American	73.216389	180.81
+U074	Male	19	Caucasian/white	70.98411	220.5
+U075	Male	19	Caucasian/white	71.77151	183.2355
+U076	Female	20	Other	66.1416	127.29465
+U077	Female	19	Caucasian/white	65.15735	117.9675
+U078	Male	19	Latino/a or Hispanic	68.8975	181.9125
+U080	Male	18	Asian or Pacific Islander	65.78727	126.567
+U081	Female	19	Caucasian/white	60.2361	102.5325
+U082	Female	20	Asian or Pacific Islander	60.6298	91.9485
+U083	Female	19	Asian or Pacific Islander	64.9605	114.94665
+U084	Male	20	Caucasian/white	67.00774	159.4215
+U085	Female	21	Caucasian/white	61.4172	125.244
+U086	Male	20	Caucasian/white	74.0156	190.071
+U087	Male	19	Caucasian/white	71.49592	196.686
+U088	Female	19	Caucasian/white	62.44082	140.8113
+U089	Female	18	Caucasian/white	61.799089	110.4705
+U090	Male	20	Caucasian/white	70.35419	169.344
+U091	Female	19	Other	62.83452	95.4765
+U092	Female	25	Caucasian/white	65.51168	162.729
+U093	Female	19	Caucasian/white	61.92901	128.772
+U094	Female	19	Caucasian/white	70.31482	179.046
+U095	NA	0	NA	0	0
+U096	Female	18	Caucasian/white	60.7345242	111.573
+U097	Female	18	Asian or Pacific Islander	61.8109	104.958
+U098	Female	20	Caucasian/white	61.0235	108.927
+U099	Male	20	Asian or Pacific Islander	67.51955	114.8805
+U100	Female	19	Asian or Pacific Islander	62.5983	110.0295
+U101	Female	19	Caucasian/white	62.031372	127.2285
+U102	Female	19	Caucasian/white	67.7164	135.0783
+U103	NA	0	NA	0	0
+U104	Female	19	Caucasian/white	63.751841	115.7625
+U105	Male	18	Caucasian/white	67.3227	152.513235
+U106	Male	18	Asian or Pacific Islander	69.09435	136.9305
+U107	Male	19	Other	69.33057	214.1055
+U108	NA	0	NA	0	0
+U109	Male	19	Caucasian/white	70.27545	173.02635
+U110	Male	18	Caucasian/white	73.89749	193.158
+U111	NA	0	NA	0	0
+U112	Male	19	Asian or Pacific Islander	69.33057	165.375
+U113	Female	18	Caucasian/white	68.07073	154.1295
+U114	Female	20	Asian or Pacific Islander	61.0235	116.424
+U115	Female	19	Black American	62.992	177.9435
+U116	Female	18	Caucasian/white	64.9605	134.2845
+U117	Female	18	Caucasian/white	64.13373	175.518
+U118	Female	19	Caucasian/white	64.5668	161.6265
+U119	Male	23	Caucasian/white	74.4093	173.5335
+U120	Male	17	Caucasian/white	68.8975	155.29815
+U121	NA	0	NA	0	0
+U122	NA	0	NA	0	0
+U123	NA	0	NA	0	0
+U124	NA	0	NA	0	0
+U125	NA	0	NA	0	0
+U126	NA	0	NA	0	0
+U127	NA	0	NA	0	0
+U128	NA	0	NA	0	0
+U129	NA	0	NA	0	0
+U130	NA	0	NA	0	0
+U131	NA	0	NA	0	0
+U132	NA	0	NA	0	0
+U133	NA	0	NA	0	0
+U134	NA	0	NA	0	0
+U135	NA	0	NA	0	0
+U136	NA	0	NA	0	0
+U137	NA	0	NA	0	0
+U138	NA	0	NA	0	0
+U139	NA	0	NA	0	0
+U140	NA	0	NA	0	0
+U141	NA	0	NA	0	0
+U142	NA	0	NA	0	0
+U143	NA	0	NA	0	0
+U144	NA	0	NA	0	0
+U145	NA	0	NA	0	0
+U146	NA	0	NA	0	0
+U147	NA	0	NA	0	0
+U148	NA	0	NA	0	0
+U149	NA	0	NA	0	0
+U150	NA	0	NA	0	0
+U151	NA	0	NA	0	0
+U152	NA	0	NA	0	0
+U153	NA	0	NA	0	0
+U154	NA	0	NA	0	0
+U155	NA	0	NA	0	0
+U156	NA	0	NA	0	0
+U157	NA	0	NA	0	0
+U158	NA	0	NA	0	0
+U159	NA	0	NA	0	0
+U160	NA	0	NA	0	0
+U161	NA	0	NA	0	0
+U162	NA	0	NA	0	0
+U163	NA	0	NA	0	0
+U164	NA	0	NA	0	0
+U165	NA	0	NA	0	0
+U166	NA	0	NA	0	0
+U167	NA	0	NA	0	0
+U168	NA	0	NA	0	0
+U169	NA	0	NA	0	0
+U170	NA	0	NA	0	0
+U171	NA	0	NA	0	0
+U172	NA	0	NA	0	0
+U174	NA	0	NA	0	0
+U175	NA	0	NA	0	0
+U176	NA	0	NA	0	0
+U177	NA	0	NA	0	0
+U178	NA	0	NA	0	0
+U179	NA	0	NA	0	0
+U180	NA	0	NA	0	0
+U181	NA	0	NA	0	0
+U182	NA	0	NA	0	0
+U183	NA	0	NA	0	0
+U184	NA	0	NA	0	0
+U185	NA	0	NA	0	0
+U186	NA	0	NA	0	0
+U187	NA	0	NA	0	0
+U188	NA	0	NA	0	0
+U189	NA	0	NA	0	0
+U190	NA	0	NA	0	0
+U191	NA	0	NA	0	0
+U192	NA	0	NA	0	0
+U193	NA	0	NA	0	0
+U194	NA	0	NA	0	0
+U195	NA	0	NA	0	0
+U196	NA	0	NA	0	0
+U197	NA	0	NA	0	0
+U198	NA	0	NA	0	0
+U199	NA	0	NA	0	0
+U200	NA	0	NA	0	0
+U201	NA	0	NA	0	0
+U202	NA	0	NA	0	0
+U203	NA	0	NA	0	0
+U210	NA	0	NA	0	0
+U211	NA	0	Caucasian/white	0	0
+U212	NA	0	NA	0	0
+U213	NA	0	NA	0	0
+U214	NA	0	Caucasian/white	0	0
+U215	NA	0	Black American	0	0
+U216	NA	0	Asian	0	0
+U217	NA	0	Asian	0	0
+U218	NA	0	NA	0	0
+U219	NA	0	Asian	0	0
+U220	NA	0	Caucasian/white	0	0
+U221	NA	0	Caucasian/white	0	0
+U222	NA	0	Asian	0	0
+U223	NA	0	Caucasian/white	0	0
+U224	NA	0	Latino/a or Hispanic	0	0
+U225	NA	0	Caucasian/white	0	0
+U226	NA	0	Other	0	0
+U227	NA	0	Caucasian/white	0	0
+U228	NA	0	Caucasian/white	0	0
+U229	NA	0	Caucasian/white	0	0
+U230	NA	0	NA	0	0
+U231	NA	0	Caucasian/white	0	0
+U232	NA	0	Caucasian/white	0	0
+U233	NA	0	Asian	0	0
+U234	NA	0	2 or more ethnicities	0	0
+U235	NA	0	NA	0	0
+U236	NA	0	NA	0	0
+U237	NA	0	Asian	0	0
+U238	NA	0	Latino/a or Hispanic	0	0
+U241	NA	0	Asian	0	0
+U242	NA	0	Native American	0	0
+U243	NA	0	Caucasian/white	0	0
+U246	NA	0	Latino/a or Hispanic	0	0
+U247	NA	0	Caucasian/white	0	0
+U248	NA	0	Caucasian/white	0	0
+U249	NA	0	Caucasian/white	0	0
+U250	NA	0	Asian	0	0
+U251	NA	0	Caucasian/white	0	0
+U252	NA	0	Asian	0	0
+U253	NA	0	Asian	0	0
+U254	NA	0	Asian	0	0
+U255	NA	0	Caucasian/white	0	0
+U256	NA	0	Caucasian/white	0	0
+U257	NA	0	Caucasian/white	0	0
+U258	NA	0	NA	0	0
+U259	NA	0	Caucasian/white	0	0
+U260	NA	0	2 or more ethnicities	0	0
+U261	NA	0	Caucasian/white	0	0
+U262	NA	0	2 or more ethnicities	0	0
+U263	NA	0	Latino/a or Hispanic	0	0
+U264	NA	0	NA	0	0
+U265	NA	0	Caucasian/white	0	0
+U266	NA	0	Hawaiian or Pacific Islander	0	0
+U267	NA	0	Caucasian/white	0	0
+U268	NA	0	Caucasian/white	0	0
+U269	NA	0	Caucasian/white	0	0
+U270	NA	0	Caucasian/white	0	0
+U271	NA	0	Caucasian/white	0	0
+U272	NA	0	Caucasian/white	0	0
+U273	NA	0	Asian	0	0
+U274	NA	0	Caucasian/white	0	0
+U275	NA	0	Caucasian/white	0	0
+U276	NA	0	Caucasian/white	0	0
+U277	NA	0	Caucasian/white	0	0
+U279	NA	0	Caucasian/white	0	0
+U280	NA	0	Caucasian/white	0	0
+U281	NA	0	Caucasian/white	0	0
+U282	NA	0	Asian	0	0
+U283	NA	0	Middle Eastern or North African (MENA)	0	0
+U284	NA	0	Caucasian/white	0	0
+U285	NA	0	NA	0	0
+U286	NA	0	Caucasian/white	0	0
+U287	NA	0	Asian	0	0
+U288	NA	0	Asian	0	0
+U290	NA	0	Caucasian/white	0	0
+U291	NA	0	Caucasian/white	0	0
+U292	NA	0	Caucasian/white	0	0
+U294	NA	0	Asian	0	0
+U295	NA	0	Asian	0	0
+U296	NA	0	Asian	0	0
+U297	NA	0	Caucasian/white	0	0
+U299	NA	0	Asian	0	0
+U300	NA	0	2 or more ethnicities	0	0
+U301	NA	0	Latino/a or Hispanic	0	0
+U302	NA	0	Asian	0	0
+U310	NA	0	NA	0	0
+U311	NA	0	Caucasian/white	0	0
+U312	NA	0	Caucasian/white	0	0
+U314	NA	0	Caucasian/white	0	0
+U315	NA	0	Caucasian/white	0	0
+U316	NA	0	Middle Eastern or North African (MENA)	0	0
+U317	NA	0	Caucasian/white	0	0
+U318	NA	0	Caucasian/white	0	0
+U319	NA	0	2 or more ethnicities	0	0
+U320	NA	0	Caucasian/white	0	0
+U321	NA	0	Caucasian/white	0	0
+U322	NA	0	Caucasian/white	0	0
+U323	NA	0	Caucasian/white	0	0
+U325	NA	0	Caucasian/white	0	0
+U326	NA	0	NA	0	0
+U327	NA	0	Caucasian/white	0	0
+U328	NA	0	Caucasian/white	0	0
+U329	NA	0	Caucasian/white	0	0
+U330	NA	0	Caucasian/white	0	0
+U331	NA	0	Asian	0	0
+U332	NA	0	Asian	0	0
+U333	NA	0	Caucasian/white	0	0
+U334	NA	0	Caucasian/white	0	0
+U335	NA	0	Caucasian/white	0	0
+U336	NA	0	Caucasian/white	0	0
+U337	NA	0	Asian	0	0
+U338	NA	0	Asian	0	0
+U339	NA	0	Caucasian/white	0	0
+U340	NA	0	Asian	0	0
+U341	NA	0	Asian	0	0
+U343	NA	0	Black non-American	0	0
+U344	NA	0	Caucasian/white	0	0
+U345	NA	0	Caucasian/white	0	0
+U346	NA	0	Asian	0	0
+U347	NA	0	Caucasian/white	0	0
+U348	NA	0	Caucasian/white	0	0
+U349	NA	0	Middle Eastern or North African (MENA)	0	0
+U350	NA	0	Caucasian/white	0	0
+U351	NA	0	Caucasian/white	0	0
+U352	NA	0	Caucasian/white	0	0
+U353	NA	0	Caucasian/white	0	0
+U354	NA	0	Caucasian/white	0	0
+U355	NA	0	Caucasian/white	0	0
+U356	NA	0	NA	0	0
+U357	NA	0	2 or more ethnicities	0	0
+U358	NA	0	Caucasian/white	0	0
+U360	NA	0	Caucasian/white	0	0
+U362	NA	0	Caucasian/white	0	0
+U363	NA	0	Caucasian/white	0	0
+U364	NA	0	Asian	0	0
+U365	NA	0	Caucasian/white	0	0
+U366	NA	0	Asian	0	0
+U367	NA	0	2 or more ethnicities	0	0
+U368	NA	0	Asian	0	0
+U369	NA	0	Caucasian/white	0	0
+U370	NA	0	Caucasian/white	0	0
+U371	NA	0	Caucasian/white	0	0
+U372	NA	0	Caucasian/white	0	0
+U373	NA	0	2 or more ethnicities	0	0
+U375	NA	0	Caucasian/white	0	0
+U376	NA	0	Caucasian/white	0	0
+U377	NA	0	Asian	0	0
+U378	NA	0	Black non-American	0	0
+U379	NA	0	Asian	0	0
+U380	NA	0	Latino/a or Hispanic	0	0
+U381	NA	0	Middle Eastern or North African (MENA)	0	0
+U382	NA	0	Caucasian/white	0	0
+U383	NA	0	Middle Eastern or North African (MENA)	0	0
+U384	NA	0	Caucasian/white	0	0
+U385	NA	0	2 or more ethnicities	0	0
+U386	NA	0	Caucasian/white	0	0
+U387	NA	0	Caucasian/white	0	0
+U388	NA	0	Asian	0	0
+U389	NA	0	Asian	0	0
+U390	NA	0	Caucasian/white	0	0
+U391	NA	0	Middle Eastern or North African (MENA)	0	0
+U392	NA	0	Asian	0	0
+U393	NA	0	Caucasian/white	0	0
+U394	NA	0	Caucasian/white	0	0
+U395	NA	0	Asian	0	0
+U396	NA	0	Caucasian/white	0	0
+U397	NA	0	Caucasian/white	0	0
+U398	NA	0	Asian	0	0
+U399	NA	0	Middle Eastern or North African (MENA)	0	0
+U400	NA	0	NA	0	0
+U401	NA	0	NA	0	0
+U402	NA	0	NA	0	0
+U404	NA	0	NA	0	0
+U405	NA	0	NA	0	0
+U406	NA	0	NA	0	0
+U407	NA	0	NA	0	0
+U408	NA	0	NA	0	0
+U410	NA	0	NA	0	0
+U411	NA	0	NA	0	0
+U412	NA	0	NA	0	0
+U413	NA	0	NA	0	0
+U414	NA	0	NA	0	0
+U415	NA	0	NA	0	0
+U416	NA	0	NA	0	0
+U417	NA	0	NA	0	0
+U418	NA	0	NA	0	0
+U419	NA	0	NA	0	0
+U420	NA	0	NA	0	0
+U421	NA	0	NA	0	0
+U422	NA	0	NA	0	0
+U423	NA	0	NA	0	0
+U424	NA	0	NA	0	0
+U425	NA	0	NA	0	0
+U426	NA	0	NA	0	0
+U427	NA	0	NA	0	0
+U428	NA	0	NA	0	0
+U429	NA	0	NA	0	0
+U430	NA	0	NA	0	0
+U431	NA	0	NA	0	0
+U432	NA	0	NA	0	0
+U433	NA	0	NA	0	0
+U434	NA	0	NA	0	0
+U436	NA	0	NA	0	0
+U437	NA	0	NA	0	0
+U438	NA	0	NA	0	0
+U439	NA	0	NA	0	0
+U441	NA	0	NA	0	0
+U442	NA	0	NA	0	0
+U443	NA	0	NA	0	0
+U444	NA	0	NA	0	0
+U445	NA	0	NA	0	0
+U446	NA	0	NA	0	0
+U447	NA	0	NA	0	0
+U448	NA	0	NA	0	0
+U449	NA	0	NA	0	0
+U450	NA	0	NA	0	0
+U452	NA	0	NA	0	0
+U453	NA	0	NA	0	0
+U454	NA	0	NA	0	0
+U455	NA	0	NA	0	0
+U456	NA	0	NA	0	0
+U457	NA	0	NA	0	0
+U458	NA	0	NA	0	0
+U459	NA	0	NA	0	0
+U460	NA	0	NA	0	0
+U461	NA	0	NA	0	0
+U462	NA	0	NA	0	0
+U463	NA	0	NA	0	0
+U464	NA	0	NA	0	0
+U465	NA	0	NA	0	0
+U466	NA	0	NA	0	0
+U467	NA	0	NA	0	0
+U468	NA	0	NA	0	0
+U469	NA	0	NA	0	0
+U470	NA	0	NA	0	0
+U471	NA	0	NA	0	0
+U472	NA	0	NA	0	0
+U473	NA	0	NA	0	0
+U474	NA	0	NA	0	0
+U475	NA	0	NA	0	0
+U476	NA	0	NA	0	0
+U477	NA	0	NA	0	0
+U478	NA	0	NA	0	0
+U479	NA	0	NA	0	0
+U480	NA	0	NA	0	0
+U481	NA	0	NA	0	0
+U482	NA	0	NA	0	0
+U483	NA	0	NA	0	0
+U484	NA	0	NA	0	0
+U485	NA	0	NA	0	0
+U486	NA	0	NA	0	0
+U487	NA	0	NA	0	0
+U488	NA	0	NA	0	0
+U489	NA	0	NA	0	0
+U500	Female	0	Asian	62	125.0226799
+U501	Female	0	Asian	67	125.0226799
+U502	Male	0	Caucasian/white	77	155.028123
+U503	Male	0	Caucasian/white	72	218.0395537
+U504	Female	0	Caucasian/white	67	148.0268529
+U506	Female	0	Caucasian/white	67	130.023587
+U507	Female	0	Caucasian/white	64	130.023587
+U508	Female	0	Asian	61	100.0181439
+U509	Female	0	Asian	66	120.0217727
+U510	Female	0	Caucasian/white	65	280.0508029
+U511	Female	0	Caucasian/white	64	110.0199583
+U512	Female	0	Caucasian/white	66	187.0339291
+U513	Female	0	Asian	61	112.0203211
+U514	Female	0	Prefer not to say	66	145.0263086
+U516	Female	0	Asian	63	116.0210469
+U517	Male	0	Caucasian/white	71	140.0254014
+U518	Female	0	Caucasian/white	65	145.0263086
+U519	Female	0	Caucasian/white	69	130.023587
+U520	Female	0	Caucasian/white	68	155.028123
+U521	Female	0	Asian	59	94.01705525
+U522	Male	0	Prefer not to say	70	180.032659
+U523	Male	0	Black American	72	160.0290302
+U524	Male	0	Caucasian/white	72	175.0317518
+U525	Female	0	Asian	66	125.0226799
+U526	Male	0	Caucasian/white	72	180.032659
+U527	Female	0	Black American	63	162.0293931
+U528	Male	0	Latino/a or Hispanic	73	252.0457226
+U529	Female	0	Caucasian/white	61	130.023587
+U530	Female	0	Middle Eastern or North African (MENA)	68	150.0272158
+U531	Female	0	Caucasian/white	64	151.0273973
+U532	Male	0	Caucasian/white	73	255.0462669
+U533	Male	0	"2 or more ethnicities, Latino/a or Hispanic, Caucasian/white"	69	168.0304817
+U534	Female	0	NA	62.5	113.0205026
+U535	Female	0	Caucasian/white	66	150.0272158
+U536	Female	0	Caucasian/white	68	165.0299374
+U540	Female	0	Caucasian/white	66	122.0221355
+U541	Male	0	Asian	69	160.0290302
+U542	Male	0	Caucasian/white	72	180.032659
+U543	Female	0	Caucasian/white	69	140.0254014
+U544	Female	0	NA	63	130.023587
+U545	Female	0	Caucasian/white	68	142.0257643
+U546	Male	0	Caucasian/white	72	145.0263086
+U547	Female	0	Asian	62	105.0190511
+U548	Female	0	Caucasian/white	63	98.017781
+U549	Female	0	Native American	62	124.0224984
+U550	Male	0	Caucasian/white	75	200.0362878
+U551	Female	0	Black American	62	135.0244942
+U552	Male	0	Black American	73	160.0290302
+U553	Female	0	Caucasian/white	66	130.023587
+U554	Female	0	Caucasian/white	75	125.0226799
+U555	Female	0	Caucasian/white	66	130.023587
+U556	Female	0	Middle Eastern or North African (MENA)	62	148.0268529
+U557	Female	0	Caucasian/white	64	130.023587
+U558	Female	0	Caucasian/white	64	150.0272158
+U559	Female	0	NA	64	165.0299374
+U561	Male	0	Middle Eastern or North African (MENA)	69	135.0244942
+U562	Female	0	Caucasian/white	63	120.0217727
+U563	Female	0	Middle Eastern or North African (MENA)	64	156.0283045
+U564	Female	0	Caucasian/white	66	145.0263086
+U565	Female	0	Caucasian/white	62	124.0224984
+U566	Male	0	Asian	73	165.0299374
+U567	Female	0	Caucasian/white	68.5	120.0217727
+U568	Male	0	Caucasian/white	74	210.0381022
+U569	Female	0	Caucasian/white	65	130.023587
+U570	Female	0	Caucasian/white	65	130.023587
+U571	Female	0	Caucasian/white	65	125.0226799
+U572	Female	0	Asian	62	108.0195954
+U573	Female	0	Middle Eastern or North African (MENA)	63	190.0344734
+U574	Female	0	Asian	67	140.0254014
+U575	Male	0	Black American	73	173.0313889
+U576	Male	0	Caucasian/white	79	160.0290302
+U577	Female	0	Latino/a or Hispanic	59	107.019414
+U578	Male	0	Asian	72	174.0315704
+U579	Female	0	Caucasian/white	61	110.0199583
+U580	Female	0	Latino/a or Hispanic	62	130.023587
+U581	Female	0	Caucasian/white	68	140.0254014
+U582	Female	0	Caucasian/white	62	125.0226799
+U583	Female	0	Caucasian/white	68	125.0226799
+U584	Female	0	Caucasian/white	61	130.023587
+U585	Male	0	Caucasian/white	69	150.0272158
+U586	Female	0	Black American	62	122.0221355
+U587	Male	0	Prefer not to say	67	148.0268529
+U588	Female	0	Asian	62.992	110.0199583
+U589	Female	0	Caucasian/white	65	135.0244942
+U600	Female	0	"2 or more ethnicities, Latino/a or Hispanic, Caucasian/white"	65	125
+U602	Female	0	Black American	64	132
+U603	Female	0	Caucasian/white	70	145
+U605	Female	0	"2 or more ethnicities including at least 1 of above, Latino/a or Hispanic"	69	168
+U606	Female	0	Caucasian/white	64	154
+U607	Female	0	"2 or more ethnicities, Native American, Caucasian/white"	67	140
+U608	Female	0	Caucasian/white	63	130
+U610	Female	0	Other	65	139
+U611	Female	0	Black American	70	180
+U612	Male	0	Asian	62	110
+U613	Female	0	Asian	61	106
+U615	Male	0	Caucasian/white	72	165
+U616	Female	0	Caucasian/white	63.5	122
+U617	Female	0	Caucasian/white	68	170
+U618	Female	0	"Caucasian/white, Other"	63	110
+U619	Male	0	Caucasian/white	72	155
+U620	Male	0	Caucasian/white	71	180
+U621	Female	0	Caucasian/white	69	165
+U622	Female	0	Caucasian/white	64	135
+U623	Female	0	Caucasian/white	61	124
+U624	Female	0	Asian	62	120
+U625	Female	0	Asian	64	135
+U626	Female	0	Asian	68	105
+U627	Male	0	Black American	71	210
+U628	Male	0	Asian	71	208
+U629	Female	0	Asian	60	110
+U630	Male	0	Asian	65	150
+U631	Female	0	Caucasian/white	63	120
+U633	Male	0	2 or more ethnicities including at least 1 of above	73	185
+U634	Male	0	Asian	70	138
+U635	Female	0	2 or more ethnicities including at least 1 of above	64	140
+U636	Female	0	Caucasian/white	62	118
+U637	Male	0	2 or more ethnicities including at least 1 of above	69	180
+U638	Male	0	Prefer not to say	71	155
+U639	Female	0	Caucasian/white	66	158
+U640	Female	0	Asian	63	97
+U642	Female	0	Caucasian/white	66	128
+U643	Female	0	"2 or more ethnicities including at least 1 of above, Latino/a or Hispanic, Caucasian/white"	63	130
+U644	Male	0	"2 or more ethnicities, Asian, Caucasian/white"	68	145
+U645	Female	0	Caucasian/white	66	145
+U646	Female	0	Caucasian/white	64	204
+U648	Female	0	Asian	65	133
+U649	Male	0	Caucasian/white	75	190
+U650	Female	0	Asian	65	135
+U651	Female	0	Caucasian/white	68	145
+U652	Female	0	Asian	64	124
+U653	Female	0	Caucasian/white	63	125
+U654	Male	0	Caucasian/white	72	175
+U655	NA	0	Black American	0	0
+U656	Male	0	Caucasian/white	66	223
+U658	Female	0	Asian	67	131
+U660	Male	0	Asian	72	195
+U661	Male	0	Caucasian/white	73	200
+U662	Female	0	Other	62	120
+U663	Female	0	Asian	66	129
+U664	Female	0	Caucasian/white	65	120
+U665	Female	0	Asian	62	106
+U666	Male	0	Caucasian/white	75	165
+U667	Male	0	Black American	70	180
+U668	Female	0	Caucasian/white	65	120
+U669	Female	0	Prefer not to say	67	123
+U670	Female	0	Asian	62	118
+U671	Female	0	Caucasian/white	61	106
+U672	Female	0	Asian	66	135
+U673	NA	0	Caucasian/white	0	0
+U674	Female	0	"2 or more ethnicities including at least 1 of above, Black American"	62	121
+U676	Female	0	Asian	62	103
+U677	Female	0	Caucasian/white	64	170
+U678	Female	0	Caucasian/white	67	145
+U679	Female	0	"2 or more ethnicities including at least 1 of above, Black American"	59	130
+U680	Female	0	Prefer not to say	69	203
+U681	Female	0	Caucasian/white	64	120
+U682	Female	0	Other	66	135
+U683	NA	0	Asian	0	0
+U685	Female	0	Latino/a or Hispanic	69	160
+U686	Female	0	Asian	66	174
+U687	Female	0	Caucasian/white	63	141
+U688	Female	0	Caucasian/white	62	148
+U689	Female	0	Black American	64	120
+U691	NA	0	NA	0	0
+U700	NA	19	Asian	67	135
+U701	NA	19	Asian	67	130
+U702	NA	19	Caucasian/white	65	180
+U703	NA	19	Caucasian/white	67	140
+U704	NA	18	Asian	68	150
+U705	NA	18	Caucasian/white	70	140
+U706	NA	18	Middle Eastern or North African (MENA)	66	147
+U707	NA	18	Caucasian/white	66	155
+U708	NA	19	Middle Eastern or North African (MENA)	69	145
+U709	NA	20	Caucasian/white	73	185
+U710	NA	18	Black American	63	130
+U711	NA	20	Middle Eastern or North African (MENA)	69.5	193
+U712	NA	19	Caucasian/white	65	132
+U713	NA	18	"2 or more ethnicities, Asian, Caucasian/white"	67	135
+U714	NA	18	Asian	67	130
+U715	NA	18	Asian	69	169
+U716	NA	18	"2 or more ethnicities, Latino/a or Hispanic, Caucasian/white"	68	164
+U717	NA	20	Caucasian/white	63	122
+U719	NA	18	Asian	63	125
+U720	NA	21	Asian	65	150
+U721	NA	21	Caucasian/white	64	135
+U722	NA	19	Caucasian/white	65	130
+U723	NA	20	Hawaiian or Pacific Islander	65	112
+U724	NA	18	Caucasian/white	65	154
+U725	NA	18	Asian	63	124
+U726	NA	20	Asian	71	210
+U727	NA	20	"2 or more ethnicities, Black American, Caucasian/white"	74	190
+U728	NA	19	Middle Eastern or North African (MENA)	73	150
+U729	NA	19	Asian	70	210
+U730	NA	20	"2 or more ethnicities, Latino/a or Hispanic, Caucasian/white"	66	130
+U731	NA	19	Middle Eastern or North African (MENA)	67	149
+U732	NA	24	Middle Eastern or North African (MENA)	60	165
+U733	NA	18	Caucasian/white	72	140
+U734	NA	20	Middle Eastern or North African (MENA)	72	150
+U735	NA	19	Middle Eastern or North African (MENA)	69	168
+U736	NA	0	NA	0	0
+U738	NA	19	Caucasian/white	62	120
+U739	NA	19	Caucasian/white	70	160
+U740	NA	18	Asian	63	125
+U741	NA	18	Asian	66	124
+U743	NA	18	"2 or more ethnicities, Black American, Latino/a or Hispanic, Caucasian/white"	66	116
+U744	NA	18	Asian	60	110
+U745	NA	19	Asian	70	147
+U746	NA	19	Middle Eastern or North African (MENA)	72	195
+U747	NA	18	Caucasian/white	67	120
+U749	NA	29	Black non-American	68	120
+U750	NA	18	Latino/a or Hispanic	69	250
+U751	NA	19	Caucasian/white	71	145
+U752	NA	19	Asian	62	143
+U753	NA	19	Caucasian/white	66	107
+U754	NA	19	Caucasian/white	59	104
+U755	NA	0	NA	0	0
+U756	NA	18	Caucasian/white	62	156
+U757	NA	19	Caucasian/white	61	105
+U758	NA	19	Asian	68	178
+U759	NA	22	Asian	62	110
+U760	NA	20	Asian	67	145
+U761	NA	19	Asian	63	110
+U762	NA	18	Asian	72	170
+U763	NA	0	NA	0	0
+U764	NA	18	Asian	66	140
+U766	NA	18	Asian	65	130
+U767	NA	19	Asian	62	160
+U768	NA	0	NA	0	0
+U769	NA	18	Latino/a or Hispanic	67	190
+U770	NA	19	Asian	66	120
+U771	NA	18	Asian	64	120
+U772	NA	18	Caucasian/white	62	115
+U773	NA	19	Caucasian/white	66	148
+U774	NA	18	Black American	65	125
+U775	NA	19	Caucasian/white	70	187
+U776	NA	20	Middle Eastern or North African (MENA)	67	146
+U777	NA	20	Caucasian/white	62	110
+U778	NA	19	Asian	61	135
+U779	NA	21	"2 or more ethnicities, Black American, Latino/a or Hispanic"	72	235
+U780	NA	19	Caucasian/white	64	125
+U781	NA	21	Caucasian/white	61	120
+U783	NA	19	Caucasian/white	63	115
+U784	NA	21	Asian	71	180
+U785	NA	19	Caucasian/white	62	115
+U786	NA	19	Caucasian/white	70	180
+U787	NA	18	Asian	65.5	109
+U788	NA	18	Caucasian/white	68	142
+U789	NA	20	Middle Eastern or North African (MENA)	74	183
+U790	NA	26	Caucasian/white	66	140
+U791	NA	19	"2 or more ethnicities, Black American, Caucasian/white"	63	150
+U792	NA	20	Caucasian/white	66	128
+U793	NA	18	Caucasian/white	62	134
+U794	NA	19	Latino/a or Hispanic	64	125
+U796	NA	20	Caucasian/white	69	145
+U797	NA	19	"2 or more ethnicities, Asian, Hawaiian or Pacific Islander"	66	160
+U798	NA	20	Caucasian/white	66	160
+U799	NA	18	Middle Eastern or North African (MENA)	74	155
+U801	NA	0	NA	0	0
+U802	NA	0	NA	0	0
+U803	NA	0	NA	0	0
+U804	NA	0	NA	0	0
+U805	NA	0	NA	0	0
+U806	NA	0	NA	0	0
+U807	NA	0	NA	0	0
+U808	NA	0	NA	0	0
+U809	NA	0	NA	0	0
+U810	NA	0	NA	0	0
+U811	NA	0	NA	0	0
+U812	NA	0	NA	0	0
+U813	NA	0	NA	0	0
+U814	NA	0	NA	0	0
+U815	NA	0	NA	0	0
+U816	NA	0	NA	0	0
+U817	NA	0	NA	0	0
+U818	NA	0	NA	0	0
+U819	NA	0	NA	0	0
+U820	NA	0	NA	0	0
+U821	NA	0	NA	0	0
+U822	NA	0	NA	0	0
+U823	NA	0	NA	0	0
+U824	NA	0	NA	0	0
+U825	NA	0	NA	0	0
+U826	NA	0	NA	0	0
+U827	NA	0	NA	0	0
+U828	NA	0	NA	0	0
+U829	NA	0	NA	0	0
+U830	NA	0	NA	0	0
+U831	NA	0	NA	0	0
+U832	NA	0	NA	0	0
+U833	NA	0	NA	0	0
+U835	NA	0	NA	0	0
+U836	NA	0	NA	0	0
+U837	NA	0	NA	0	0
+U838	NA	0	NA	0	0
+U839	NA	0	NA	0	0
+U840	NA	0	NA	0	0
+U841	NA	0	NA	0	0
+U842	NA	0	NA	0	0
+U844	NA	0	NA	0	0
+U845	NA	0	NA	0	0
+U846	NA	0	NA	0	0
+U847	NA	0	NA	0	0
+U848	NA	0	NA	0	0
+U849	NA	0	NA	0	0
+U850	NA	0	NA	0	0
+U851	NA	0	NA	0	0
+U852	NA	0	NA	0	0
+U854	NA	0	NA	0	0
+U855	NA	0	NA	0	0
+U858	NA	0	NA	0	0
+U859	NA	0	NA	0	0
+U861	NA	0	NA	0	0
+U862	NA	0	NA	0	0
+U863	NA	0	NA	0	0
+U864	NA	0	NA	0	0
+U866	NA	0	NA	0	0
+U867	NA	0	NA	0	0
+U868	NA	0	NA	0	0
+U869	NA	0	NA	0	0
+U870	NA	0	NA	0	0
+U871	NA	0	NA	0	0
+U872	NA	0	NA	0	0
+U873	NA	0	NA	0	0
+U875	NA	0	NA	0	0
+U876	NA	0	NA	0	0
+U877	NA	0	NA	0	0
+U879	NA	0	NA	0	0
+U880	NA	0	NA	0	0
+U881	NA	0	NA	0	0
+U882	NA	0	NA	0	0
+U883	NA	0	NA	0	0
+U884	NA	0	NA	0	0
+U885	NA	0	NA	0	0
+U886	NA	0	NA	0	0
+U887	NA	0	NA	0	0
+U888	NA	0	NA	0	0
+U889	NA	0	NA	0	0
+U890	NA	0	NA	0	0
+U891	NA	0	NA	0	0
+U892	NA	0	NA	0	0
+U893	NA	0	NA	0	0
+U894	NA	0	NA	0	0
+U895	NA	0	NA	0	0
+U896	NA	0	NA	0	0
+U897	NA	0	NA	0	0
+U898	NA	0	NA	0	0
+U899	NA	0	NA	0	0
