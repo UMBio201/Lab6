@@ -1,0 +1,423 @@
+---
+title: 'Lab 6: Tidy data, Part 1'
+author: "Kristi Gdanetz MacCready"
+date: "02/12/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = "~/Documents/UMBio201/Lab6/")
+```
+
+# Load packages
+```{r Load packages, message=FALSE, warning=FALSE, include=FALSE, results='hide'}
+library(tidyverse)
+library(readxl)
+library(broom)
+library(cowplot)
+library(agricolae)
+set.seed(7)
+```
+
+# Import data
+```{r}
+lab6_df <- all_data_indv <- read_delim("raw_data/all_data_indv.txt", 
+    "\t", escape_double = FALSE, trim_ws = TRUE,
+    col_types = cols("Participant ID" = col_character(),
+                     "Sample Number" = col_character(), #default reads a numeric
+                     "Sample ID" = col_character(),
+                     "Study Week" = col_character(),
+                     Semester = col_character(),
+                     "Use Data" = col_character(),
+                     "Quantity compliant" = col_character(),
+                     Frequency = col_character(),
+                     "Supplement consumed" = col_character(),
+                     "Final weight" = col_double(),
+                     "Acetate mM" = col_double(),
+                     "Butyrate mM" = col_double(),
+                     "Propionate mM" = col_double(),
+                     "SCFA notes" = col_character(),
+                     pH = col_double(), #default reads as logical
+                     "Bristol score" = col_character() #default reads as logical
+                     ))
+```
+
+# Introduction
+When working with large data sets (and small ones too!), curating or cleaning-up the data is 50% of the work. You should not attempt any analyses until you know all data is properly formatted, and any erroneous or unreliable data points have been appropriately delt with. In all labs prior to today, you have been working with data that was already tidy. Today's lab will teach you some of the most crucial skills for any career that contains any data science element. 
+
+A tidy data set can be identified if the following conditions are met: 
+
+* Each variable has its own column
+* Each observation has its own row
+* Each value must have its own cell
+
+Additionally, there are other implicit issues that need dealt with: 
+
+* numeric values should be coded as numbers
+* words should be coded as characters
+* dates should make sense for population and/or time of study
+* there are no typos in group or variable names
+* NA values are coded consistently
+* measured values are within biological limits
+* and etc... 
+
+We will address all these issues in lab today. Making sure the values in the data frame are correct by removing typos and ensuring they are properly bounded (e.g., no weights of zero, or no concentrations 100x the biological limit, years are within range study was conducted) is critical to the validity of any analysis. First we will clean up the data, then we will format the data frame for statistical tests and plotting. 
+
+
+# Column names
+
+Look again at the column names in the `lab6_df` data frame, notice that some names are in title case (e.g., "Participant_ID") and others are in all lower case (e.g., "tube_wt"). Also, some of the column names may not make sense if you are not familiar with the types of SCFAs measured, and how the measurements were collected. Some of the column names contain spaces, while others use underscores. Let’s fix these issues to make using the data easier. 
+```{r}
+colnames(lab6_df)
+```
+
+### Rename
+
+Hopefully the following items regarding the column names stand out: 
+
+* the capitalization is inconsistent
+* units are missing 
+* none are in snake case
+
+Notes about snake case:
+The general preference in the R world is to use lowercase lettering and to separate words in a name with an underscore (i.e., _). This is called “snake case”. You've been working with snake case all semester! Having a consistent capitalization strategy may seem a bit pedantic, but it makes it easier to keep names straight when you don’t have to remember capitalization. 
+
+The rename() function in the dplyr package allows us to rename individual column names. The example below changes the column tube_wt to full_wt_g to be more informative. Notice the new name also includes the unit of measurement: g = grams. Remember to assign any changes to column names to the same or a new object, if you do assign the changes, the data frame in the global environment will not be altered. 
+```{r}
+#new column appears to the left of =
+rename(lab6_df, "Sample_wt_g" = "Final weight") 
+```
+
+We can convert all the column names to lower case using the rename_all() function in the dplyr package with the tolower() function. Conversely, if you wanted everything in all caps, you could use the toupper() function. 
+```{r}
+rename_all(lab6_df, tolower)
+```
+
+Tip: pipe all the column name modifications after the import function, then the first object created in the analysis is at least partially cleaned up.
+```{r}
+lab6_df <- lab6_df <- all_data_indv <- read_delim("raw_data/all_data_indv.txt", 
+    "\t", escape_double = FALSE, trim_ws = TRUE,
+    col_types = cols("Participant ID" = col_character(),
+                     "Sample Number" = col_character(), #default reads a numeric
+                     "Sample ID" = col_character(),
+                     "Study Week" = col_character(),
+                     Semester = col_character(),
+                     "Use Data" = col_character(),
+                     "Quantity compliant" = col_character(),
+                     Frequency = col_character(),
+                     "Supplement consumed" = col_character(),
+                     "Final weight" = col_double(),
+                     "Acetate mM" = col_double(),
+                     "Butyrate mM" = col_double(),
+                     "Propionate mM" = col_double(),
+                     "SCFA notes" = col_character(),
+                     pH = col_double(), #default reads as logical
+                     "Bristol score" = col_character() #default reads as logical
+                     )) %>%
+  select(-"Sample ID") %>% 
+  rename(Participant_ID = "Participant ID", #replace spaces with underscores 
+         Sample_Number = "Sample Number",
+         Study_Week = "Study Week",
+         Use_Data = "Use Data",
+         Quantity_compliant = "Quantity compliant",
+         Supplement_consumed = "Supplement consumed",
+         Final_weight_g = "Final weight",
+         SCFA_notes = "SCFA notes",
+         Bristol_score = "Bristol score") %>%
+  rename_all(tolower) %>% #make everything lower case 
+  rename(pH = ph,
+         acetate_mM = "acetate mm",
+         butyrate_mM = "butyrate mm",
+         propionate_mM = "propionate mm") #fix units of SCFAs
+```
+
+
+# Data types and curation 
+
+You have already seen and the functions below, these make viewing and understanding the structure of your data frame easy. When you first import a data frame you likely will want to view it, or part of it. 
+
+```{r eval=FALSE, include=FALSE}
+# functions to understand the size of a data frame
+nrow() 
+ncol() 
+dim() 
+
+# functions to access labels
+colnames() 
+rownames() 
+
+# functions to summarise entire or part of data frame
+glimpse() 
+str() 
+summary()
+
+# functions to get counts of subset of data frame
+table()
+n_distinct()
+unique()
+```
+
+### Check column types
+
+If you use read_delim() or read_excel() you can specify the column types during data import, if you let the functions auto-dectect the type of data, sometimes numeric columns end up as character/logical (shown with pH and Bristol score above). Or there are instances where a number might be used to represent a categorial variable (such as the sample_number column in the data frame). This section will introduce some functions to determine the data type in the column, and convert between types if needed. 
+
+##### Numeric + separate
+
+```{r}
+# check if a specific column is a number
+is.numeric(lab6_df$bristol_score)
+```
+View the contents of this column to determine why it is not reading as a number:
+```{r}
+table(lab6_df$bristol_score)
+```
+
+This is not reading as a number because the recorded values contain the word "Type". We can remove these using some handy functions:
+```{r}
+df2 <- lab6_df %>%
+  separate(col = bristol_score, #column you want to modify
+           into = c("type", "BSS_numeric"), #resulting columns
+           sep = "\\s", #separate at first space
+           remove = TRUE, #drop column after modification
+           extra = "drop") #drop extra (if there are multiple space)
+df2
+```
+Use the accessor functions to determine if the separate function was successful. 
+```{r}
+nrow(lab6_df) # how many initial rows?
+
+nrow(df2) #now many resulting rows?
+
+colnames(df2) #are the new columns present?
+
+table(df2$BSS_numeric)
+
+is.numeric(df2$BSS_numeric) #is this TRUE?
+```
+
+We see the values all look like numbers, but are not reading as numeric, so those need modified using the as.numeric() function below:
+```{r}
+df3 <- df2 %>%
+  select(-type) %>%  #drop "type" column created from separate()
+  mutate(BSS_numeric = as.numeric(BSS_numeric))  #convert character column to number, implicity converts "4/5" to NA
+
+# check the results 
+nrow(df3)
+table(df3$BSS_numeric)
+```
+
+In the example above, the as.numeric() function is used within mutate to modify individual columns of a data frame. Remember when using mutate with pipes, the first argument is the new column (here we are using the old column name as the new column, so the old column is overwritten), then after the "=" we have the function for the action (here that is as.numeric). Within the action function we have to call again the old column so the function know which values to modify. As with any other function, assign the modified data frame to a new object. If you don't assign the result, the data frame will not actually be modified in the global environment. 
+
+Advanced: you can modify multiple columns at once without coding each column individually. In the example below we have several columns (SCFA measurements) that share part of a column name, we call these with ends_with(). We use a different version of the mutate function that only excutes the action (here the action is as.numeric) if conditions are met (here the condition is matching part of a column name). 
+```{r}
+# convert multiple columns
+df3 %>%
+  mutate_if(ends_with("_mM"), as.numeric)
+```
+
+
+##### Character + combine
+The concepts are identical to those in the previous section, only the syntax differs, use "character" instead of "numeric". 
+```{r eval=FALSE, include=FALSE}
+# check if column is character
+is.character()
+
+# convert numeric column to character
+df3 %>%
+  mutate(sample_number = as.character(sample_number))
+```
+
+Participants collect fecal samples into tubes labelled with sample numbers, but to use the sample numbers to match up measurements (SCFAs with pH, or either of these with microbial community data) we have to create a new column that has a unique identifier for each participant + sample number combination. You've already worked with these (Sample IDs) in previous weeks. The section below will illustrate how these are generated.
+```{r}
+df4 <- df3 %>%
+  # make character
+  mutate(sample_number = as.character(sample_number)) %>% 
+  # combine two columns into new column: sample_id
+  mutate(sample_id = paste(participant_id, sample_number, sep = "_")) %>%
+  # reorder colmns so new column appears third 
+  select(participant_id, sample_number, sample_id, everything())
+df4
+```
+
+In the example above we are using the paste() function to combine the contents of two columns. For the "sep" argument you specify what string (character/text) you want to separate the two columns in the output, here that is and underscore. It may be useful to think of this as an equation with text: participant_id + _ + sample_number = sample_id. So sample 4 from participant U001 becomes: U001 + _ + 4 = U001_4. 
+
+### Dealing with NAs
+
+We have disuccsed NA values briefly in regard to mean calculations. However there are other functions you may need to use that do not come with an argument (such as na.rm=TRUE) that makes dealing with NAs easy. In these cases, you will have to remove or recode the NA values before executing the function. 
+
+##### Drop NA
+
+If you google "how to remove NAs in R" there are a lot of options, but I think there is one option that is clearly superior to all others, the drop_na() function from tidyr package (part of the tidyverse). Some of the other functions from base R to deal with removal of NAs have unexpected default behaviors which are likely to introduce artifacts into the dataset, these are best avoided. Read the drop_na() help page, and run through the examples below to see how the differing arguments in drop_na() influence the number of data points retained. 
+```{r}
+# starting dimensions
+dim(lab6_df)
+
+# starting number of participants
+n_distinct(lab6_df$participant_id)
+```
+
+```{r}
+# drop all NAs in data frame 
+# without specifying columns in agruments to function
+df_na1 <- lab6_df %>%
+  drop_na()
+
+# check dimensions
+dim(df_na1)
+
+# check number of participants
+n_distinct(df_na1$participant_id)
+```
+As you can see from the results of our accessor functions, a blanket removal of all NA values has caused us to lose data from 520 participants! This is because pH and Bristol score were not always recorded as part of this study. The drop_na() function is best used just prior to a statistical test or plotting a figure, as we have used it the past few weeks. 
+
+##### Replace NA
+
+There may be scenarios where you have calculated values (for example, the result of a mutate() function) that generate NAs that would appropriately replaced with 0's, or you have a categorial variable that is missing which would be appropriate to replace with another label (such as "other" or "unknown"). Another tidyr function, replace_na(), makes this easy.
+```{r}
+# check categorial variables
+unique(df4$frequency)
+```
+Using the unique() function shows us there are some NA values in the frequency column of the data frame. Upon further inspection we can see these are from participants who did not consume a supplement. We can use replace_na() inside of a mutate function to replace NAs in this column with "0xdaily".
+```{r}
+# replace values, save to new data frame 
+df5 <- df4 %>%
+  mutate(frequency = replace_na(frequency, "0xdaily"))
+
+# check the result
+unique(df5$frequency)
+```
+
+### Potential typos
+
+Run the table function on the supplement column below:
+```{r}
+table(df5$supplement_consumed)
+```
+
+Notice anything weird here? Yup. In the “supplement_consumed” column, it looks like formatting for supplement mixes were inconsistent (some used + and others used &). We can use the dplyr function recode() inside of mutate to fix this so all have "+". Careful with recode, the order of the arguments is backwards to what you've become used to, the replacement variable (Psyllium+BRMPS) is actually last. 
+```{r}
+# use recode with pipes
+df6 <- df5 %>%
+  mutate(supplement_consumed = recode(supplement_consumed, "Psyllium&BRMPS"="Psyllium+BRMPS"))
+
+# check results by calling table again
+table(df6$supplement_consumed) 
+```
+
+
+# Bounds of data
+
+Arguably one of the most important skills you can develop during your scientific career is the ability to evalualte the reliability of any given statement (including measurements). Working with large datasets, especially ones where part of the data was entered by hand, there is a possibiliy of encountering typos or artifacts. Sometimes these artifacts are easier to identify than others. In this section we will go through some possible options for identifying and correcting these. 
+
+### Values that don't make sense
+
+Run the code below, and pay attention to the output for height and weight. 
+```{r}
+bio_df <- read_delim("raw_data/bio_df.txt", 
+                     "\t", escape_double = FALSE, trim_ws = TRUE) %>%
+  rename_all(tolower) %>%
+  rename(race_ethnicity = "race/ethnicity") #remove backslash 
+summary(bio_df)
+```
+Notice something odd about the minimum for each of these columns? Right, we cannot have people with 0's for these values, that just is not possible! Likely someone entered 0 instead of NA for individuals where this information was not disclosed. All we have to do is replace the 0 with an NA. The last thing to do here is convert height and weight to metric units. 
+```{r}
+bio2 <- bio_df %>%
+  # use na_if within mutate to get rid of 0's
+  mutate(age = na_if(age, 0),
+         ht_in = na_if(ht_in, 0),
+         wt_lbs = na_if(wt_lbs, 0)) %>%
+  # convert to metric
+  mutate(ht_cm = round((ht_in * 2.54), digits = 2),
+         wt_kg = round((wt_lbs / 2.205), digits = 2))
+
+# check the results
+summary(bio2)
+```
+Now our minimum values are not longer zero for age, height, or weight. If you're not familar with the metric units you can type them into Google's unit conversion calculator, and see they are reasonable values for adults. 
+
+Something that might not be as obvious is the maximum values for some of the SCFA measurements. When conducting any type of study, you often will have an idea of the expected range of values. This can come from already published literature, a preliminary study conducted by yourself or a colleague, or maybe have been estimated from a model or algorithm. We actually do not know if there is a biological limit to the SCFA concentrations, but we have a good estimate of what the typical concentrations are in adult humans. The means are 46.88, 12.85, 9.907 mmol/kg for acetate, butyrate, and propionate, respectively. 
+
+### Quality control Part 1
+
+We also have methodological reasons for being suspicious of very high SCFA concentrations. 
+
+* the collection tubes sometimes have faulty caps, causing the sample buffer (or sample) to leak out 
+* students did not follow instructions and collected too little or too much fecal material
+* tube was dropped during collection and some sample buffer was spilled
+
+Any of these scenarios will effect the resulting mmol/kg concentration because the calculations assume 2 ml of sample buffer, and the sample weight is calculated as tube weight without sample subtracted from tube weight with sample. If there is less buffer in the tubes when the second weight is determined, the measurements are not usable. For Winter 2015, the tube weights before the fecal samples were collected are missing. This is why SCFA measurements from this semester are not used in our analyses. 
+
+This process is specific to our study and sample collection protocol, but hopefully walking through this process illustrates why giving consideration to quality control is important for any study.
+
+```{r}
+# determine number of initial samples
+```
+
+To address the points raised above the code below is going to do a series of filtering steps before some calculations. The following code chunck executes the following: 
+
+* remove weights that are too low
+* remove weights that are too high
+* remove samples that were not frozen in time 
+* calculate mmol/kg 
+
+```{r}
+lab6_qc1 <- df6 %>% 
+  filter(use_data == "yes",
+         # discard less than 0.10 and more than 1.00
+         final_weight_g >= 0.10 & final_weight_g <= 1.00) %>% 
+  # remove flagged samples 
+  filter(scfa_notes != "spill",
+         scfa_notes != "leak/spill",
+         scfa_notes != "volume low",
+         scfa_notes != "likely spill",
+         scfa_notes != "unreliable weight",
+         scfa_notes != "contaminated",
+         scfa_notes != "unusable",
+         scfa_notes != "unreliable",
+         scfa_notes != ">24 hours",
+         scfa_notes != "frozen after 35 hrs",
+         scfa_notes != "material in cap",
+         scfa_notes != "REMOVE",
+         scfa_notes != "no SCFA measurement",
+         scfa_notes != "verify weights") %>%
+  # format concentrations: change grams to kilograms, convert to numeric, calculate mmol/kg
+  transform(sample_wt_kg = ( final_weight_g / 1000 )) %>%
+  transform(acetate_mmol_kg = ( acetate_mM * 0.002 / sample_wt_kg ), 
+            butyrate_mmol_kg = ( butyrate_mM * 0.002 / sample_wt_kg ),
+            propionate_mmol_kg = ( propionate_mM * 0.002 / sample_wt_kg )) %>%
+  select(-scfa_notes, -use_data, -sample_wt_kg, -ends_with("_mM"))
+```
+
+All of these quality filtering measures have already been applied to data you have used in this course. In addition to what is in the code chunk above the following have been completed:
+
+* identify outliers for each SCFA
+* remove outliers for each SCFA
+* determine number of samples per week
+* drop ppl without enough samples (at least 2 per week)
+
+Now that we are confident all of our measurements are reasonable, we can go ahead and do any analysis.
+```{r}
+# calculate weekly mean of measurements for each participant 
+avg_qc <- lab6_qc1 %>%
+  group_by(participant_id, study_week, frequency, 
+           semester, supplement_consumed, quantity_compliant) %>% 
+  summarise(pH_mean = mean(pH, na.rm = TRUE),
+            bristol_mean = mean(BSS_numeric, na.rm = TRUE),
+            acetate_mean = mean(acetate_mmol_kg, na.rm = TRUE), 
+            butyrate_mean = mean(butyrate_mmol_kg, na.rm = TRUE), 
+            propionate_mean = mean(propionate_mmol_kg, na.rm = TRUE))
+```
+
+# Save data
+```{r}
+write_delim(avg_qc, delim = "\t", na = "NA", col_names = TRUE,
+            path = "curated_data/avg_qc.txt")
+
+write_delim(bio2, delim = "\t", na = "NA", col_names = TRUE,
+            path = "curated_data/biographical_data.txt")
+```
+
+
+-----
+end
