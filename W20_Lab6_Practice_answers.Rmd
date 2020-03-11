@@ -1,0 +1,194 @@
+---
+title: "Lab 6: extra practice"
+author: "Kristi Gdanetz MacCready"
+date: "02/12/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = "~/Box Sync/Schmidt_Lab/Bio201_teaching/W20_Protocols/Lab6/")
+```
+
+# Load packages
+```{r Load packages, message=FALSE, warning=FALSE, include=FALSE, results='hide'}
+library(tidyverse)
+library(readxl)
+library(broom)
+library(cowplot)
+set.seed(7)
+```
+
+# Import data
+Load the curated data created during Lab 6 if it is not already in your global environment
+```{r}
+avg_qc <- read_delim(file = "curated_data/avg_qc.txt", 
+                      delim = "\t", na = "NA", col_names = TRUE)
+
+bio2 <- read_delim(file = "curated_data/biographical_data.txt", 
+                   delim = "\t", na = "NA", col_names = TRUE)
+
+join5 <- read_delim(file = "curated_data/joined_results.txt", 
+                    delim = "\t", na = "NA", col_names = TRUE)
+```
+
+
+# Pratice 1
+Join the biographical and join5 data frames. Use this new data frame to answer the following questions:
+
+* (Q1) is the proportion of male and female participants consuming starch different?
+* (Q2) is the proportion of students with a positive response (this can be with one of more measures, SCFA, pH, etc.) to any potato starch different by sex? 
+* (Q3) Do you observe the same pattern when comparing types (LOODAT or BRMPS) of potato starches?
+* (Q4) Do you observe the same pattern when comparing frequency (1x or 2x) of starch consumed?
+* (Q5) is the proportion of students with a positive response to potato starch different by race/ethnicity? 
+* (Q6) Do you observe the same pattern when comparing types (LOODAT or BRMPS) of potato starches?
+* (Q7) Do you observe the same pattern when comparing frequency (1x or 2x) of starch consumed?
+
+```{r}
+# join here 
+joined <- inner_join(bio2, join5, by = "participant_id")
+```
+
+### Q1
+```{r}
+
+```
+
+### Q2
+```{r}
+
+```
+
+### Q3
+```{r}
+
+```
+
+### Q4
+```{r}
+
+```
+
+### Q5
+```{r}
+
+```
+
+### Q6
+```{r}
+
+```
+
+### Q7
+```{r}
+
+```
+
+
+# Practice 2
+
+###  Filter and plot
+Repeat the spread + gather process from Lab 6 to reduce the number of individuals who have paired measurements for pH and Bristol score. Calculate delta values for each of these metrics and plot them. 
+```{r}
+# calculate detla pH
+pH_wide <- avg_qc %>%
+  select(participant_id, study_week, frequency, supplement_consumed, pH_mean) %>% 
+  filter(study_week == "week1" | study_week == "week3" ) %>% 
+  spread(key = "study_week", value = "pH_mean") %>%
+  mutate(week1 = as.numeric(week1),
+         week3 = as.numeric(week3),
+         delta_ph = week3 - week1) %>%
+  drop_na(delta_ph) %>%
+  select(-week1, -week3)
+pH_wide
+```
+```{r}
+# calculate detla Bristol
+bss_wide <- avg_qc %>%
+  select(participant_id, study_week, frequency, supplement_consumed, bristol_mean) %>% 
+  filter(study_week == "week1" | study_week == "week3" ) %>% 
+  spread(key = "study_week", value = "bristol_mean") %>%
+  mutate(week1 = as.numeric(week1),
+         week3 = as.numeric(week3),
+         delta_bss = week3 - week1) %>%
+  drop_na(delta_bss) %>%
+  select(-week1, -week3)
+bss_wide
+```
+```{r}
+# join data frames with deltas and plot 
+ph_bss <- full_join(pH_wide, bss_wide, 
+                    by = c("participant_id", "frequency", "supplement_consumed"))
+
+# pH plot
+ph_bss %>%
+  ggplot(aes(x = supplement_consumed, y = delta_ph, 
+             color = supplement_consumed)) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  geom_violin() +
+  geom_jitter(width = 0.25) + 
+  xlab(NULL) + 
+  scale_y_continuous(name = "pH (wk3 - wk1)",
+                     breaks = c(-2, -1, 0, 1, 2)) +
+  theme(legend.position = "none",
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+
+# BSS plot
+ph_bss %>%
+  ggplot(aes(x = supplement_consumed, y = delta_bss, 
+             color = supplement_consumed)) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  geom_violin() +
+  geom_jitter(width = 0.25) + 
+  xlab(NULL) + 
+  scale_y_continuous(name = "Bristol Score (wk3 - wk1)",
+                     breaks = c(-3, -2, -1, 0, 1, 2, 3)) +
+  theme(legend.position = "none",
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+```
+
+### Q1
+Check assumptions, select and conduct the test you would need to use to identify if pH changed when participants consumed BRMPS. Hint: do not use the delta values here. 
+```{r}
+pH_wide <- avg_qc %>%
+  select(participant_id, study_week, frequency, supplement_consumed, pH_mean) %>% 
+  filter(study_week == "week1" | study_week == "week3" ) %>% 
+  spread(key = "study_week", value = "pH_mean") %>%
+  mutate(week1 = as.numeric(week1),
+         week3 = as.numeric(week3)) %>%
+  drop_na() %>%
+  filter(supplement_consumed == "BRMPS")
+
+# check sample size 
+pH_wide %>%
+  summarise(N = n())
+# check variances
+var.test(x = pH_wide$week1, y = pH_wide$week3, paired = TRUE, alternative = "two.sided") #p-value = 0.1696
+
+# t-test
+t.test(x = pH_wide$week1, y = pH_wide$week3,
+       paired = TRUE, alternative = "two.sided", var.equal = TRUE) #0.01562
+```
+
+### Q3
+Check assumptions, select and conduct the test you would need to use to identify under which supplement there was the greatest change in pH?
+```{r}
+# sample size 
+ph_bss %>%
+  select(-delta_bss) %>%
+  drop_na() %>% 
+  group_by(supplement_consumed) %>%
+  summarise(Total = n())
+
+# variance check = formula of the form lhs ~ rhs where lhs gives the data values and rhs the corresponding groups.
+ph_bss %>%
+  select(-delta_bss) %>%
+  drop_na() %>% 
+  bartlett.test(., formula = delta_ph ~ supplement_consumed)
+
+kruskal.test(delta_ph ~ supplement_consumed, data = ph_bss) #formula = response ~ group 
+```
+
+
+-----
+end
